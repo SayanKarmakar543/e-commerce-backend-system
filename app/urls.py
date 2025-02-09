@@ -23,7 +23,8 @@ from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("api/user/", include("user.urls")), 
-    path("api/product/", include("product.urls")),
+    path("api/", include("product.urls")),
+    path("api/", include("cart.urls")),
     path("api/schema/", SpectacularAPIView.as_view(), name="schema"),
     path(
         "api/docs/",
